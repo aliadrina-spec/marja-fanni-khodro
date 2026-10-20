@@ -1,40 +1,911 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#142b40">
-<title>مرجع فنی خودرو | نمونه اولیه</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#102438">
+<meta name="description" content="مرجع فنی خودرو، نقشه‌های سیم‌کشی، اطلاعات تعمیراتی و فایل‌های فنی خودرو">
+<title>مرجع فنی خودرو | تنظیم موتور رجبی</title>
+
 <style>
-:root{--navy:#142b40;--navy2:#203e57;--cyan:#4ac7e8;--paper:#f3f6f8;--card:#fff;--ink:#182b3a;--muted:#667989;--line:#dce5eb;--orange:#f2a65a;--green:#16866b}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Tahoma,"Vazirmatn",Arial,sans-serif;line-height:1.65}button,input,select{font:inherit}button{cursor:pointer}.app{max-width:1040px;margin:auto;min-height:100vh;background:var(--paper)}header{background:linear-gradient(130deg,var(--navy),var(--navy2));color:white;padding:22px 18px 26px;border-radius:0 0 24px 24px}.top{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;display:grid;place-items:center;background:#ffffff17;border:1px solid #ffffff35;border-radius:15px;font-size:27px}.brand{font-weight:800;font-size:19px}.sub{font-size:12px;color:#c5d7e4}.tag{margin-right:auto;border:1px solid #ffffff38;padding:5px 9px;border-radius:30px;font-size:11px;color:#d4e7f2}.hero{margin:23px 0 15px;font-size:23px;font-weight:800;line-height:1.5}.hero span{color:var(--cyan)}.desc{font-size:13px;color:#d3e0e9;max-width:600px}.search{margin-top:20px;background:white;border-radius:14px;display:flex;align-items:center;gap:8px;padding:5px 12px;color:var(--muted);box-shadow:0 8px 25px #071c2a30}.search input{border:0;outline:0;min-width:0;flex:1;padding:11px 2px;color:#172d3d;background:transparent}.search button{background:var(--cyan);border:0;color:#102d40;padding:8px 13px;border-radius:10px;font-weight:bold}.wrap{padding:19px 15px 35px}.section-head{display:flex;align-items:center;justify-content:space-between;margin:4px 2px 12px}.section-head h2{font-size:17px;margin:0}.small{font-size:12px;color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:23px}.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 10px}.stat strong{font-size:19px;display:block}.stat span{font-size:11px;color:var(--muted)}.categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:23px}.category{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:14px 12px;display:flex;gap:11px;align-items:center;text-align:right;color:var(--ink);transition:.15s}.category:active,.category.active{border-color:var(--cyan);box-shadow:0 0 0 2px #4ac7e833}.cat-icon{width:43px;height:43px;flex-shrink:0;display:grid;place-items:center;background:#e8f7fb;border-radius:12px;font-size:22px}.category strong{display:block;font-size:13px}.category small{font-size:11px;color:var(--muted)}.filters{display:flex;gap:7px;overflow:auto;padding-bottom:9px;margin-bottom:9px}.chip{border:1px solid var(--line);background:white;border-radius:25px;padding:7px 12px;white-space:nowrap;font-size:12px;color:#3c5364}.chip.active{background:var(--navy);color:white;border-color:var(--navy)}.docs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.doc{background:var(--card);border:1px solid var(--line);border-radius:15px;overflow:hidden}.doc-top{height:105px;background:linear-gradient(145deg,#e6f4f8,#d4e4ec);display:flex;align-items:center;justify-content:center;position:relative}.doc-top svg{width:80%;height:88%;}.doc-type{position:absolute;right:9px;top:8px;background:white;color:var(--navy);border-radius:6px;padding:3px 7px;font-size:10px}.doc-body{padding:11px}.doc h3{font-size:13px;line-height:1.7;margin:0 0 5px}.meta{font-size:11px;color:var(--muted);min-height:36px}.doc-foot{display:flex;align-items:center;justify-content:space-between;margin-top:10px;gap:6px}.label{font-size:10px;background:#edf5f7;color:#2e6a7d;border-radius:5px;padding:3px 6px}.open{border:0;background:var(--navy);color:white;border-radius:8px;padding:6px 10px;font-size:11px}.empty{grid-column:1/-1;text-align:center;padding:28px 12px;color:var(--muted);background:white;border-radius:14px;border:1px dashed var(--line)}.note{margin-top:20px;background:#fff8ed;border:1px solid #f5dfbf;padding:12px;border-radius:12px;color:#72502a;font-size:12px}.admin{margin-top:20px;background:white;border:1px solid var(--line);border-radius:15px;padding:14px}.admin summary{font-weight:bold;cursor:pointer}.admin p{font-size:12px;color:var(--muted)}.admin form{display:grid;gap:9px}.admin input,.admin select{width:100%;border:1px solid var(--line);border-radius:9px;padding:10px;background:white;color:var(--ink)}.admin .add{border:0;border-radius:9px;padding:10px;background:var(--green);color:white;font-weight:bold}.admin .warning{background:#fff8ed;border-radius:9px;padding:10px;font-size:11px;color:#80582d}footer{text-align:center;padding:22px 12px 35px;color:var(--muted);font-size:11px}.modal{position:fixed;inset:0;background:#071b2bd1;display:none;align-items:flex-end;justify-content:center;padding:12px;z-index:5}.modal.show{display:flex}.modal-card{width:min(100%,600px);max-height:88vh;overflow:auto;background:white;border-radius:20px;padding:18px;color:var(--ink)}.modal-head{display:flex;justify-content:space-between;align-items:center;gap:12px}.modal-head h2{font-size:17px;margin:0}.close{border:0;background:#eaf0f3;border-radius:9px;padding:6px 11px}.modal-card p{font-size:13px}.diagram{background:#edf6f8;border-radius:12px;padding:10px;margin:12px 0}.diagram svg{width:100%;height:auto;max-height:260px}.btn-row{display:flex;gap:8px;flex-wrap:wrap}.btn-row button{border:0;border-radius:9px;background:var(--navy);color:white;padding:9px 12px;font-size:12px}.btn-row .secondary{background:#e9f0f4;color:var(--navy)}@media(min-width:700px){header{padding:28px 32px 32px}.wrap{padding:24px 28px 40px}.hero{font-size:30px}.categories{grid-template-columns:repeat(4,1fr)}.docs{grid-template-columns:repeat(3,minmax(0,1fr))}.doc-top{height:135px}.modal{align-items:center}}@media(max-width:360px){.tag{display:none}.hero{font-size:20px}.stats{gap:6px}.stat{padding:9px 7px}.docs{grid-template-columns:1fr}.doc-top{height:125px}}
+:root {
+  --bg:#f1f5f9;
+  --card:#ffffff;
+  --navy:#102438;
+  --navy2:#193c56;
+  --blue:#087ea4;
+  --cyan:#22c5d9;
+  --text:#172b3a;
+  --muted:#687b8b;
+  --border:#dce5ed;
+  --green:#16845b;
+  --red:#c63d45;
+  --radius:18px;
+}
+* { box-sizing:border-box; }
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Tahoma,Arial,sans-serif;
+  line-height:1.9;
+}
+button,input,select,textarea { font:inherit; }
+button { cursor:pointer; }
+button:focus-visible,input:focus-visible,select:focus-visible,
+textarea:focus-visible { outline:3px solid #68cde0; outline-offset:2px; }
+.container { width:min(1100px,94%); margin:auto; }
+header {
+  color:white;
+  background:linear-gradient(135deg,#0b1c2c,#193f5b);
+  padding:18px 0 30px;
+  border-bottom:4px solid var(--cyan);
+}
+.topline {
+  display:flex; align-items:center; justify-content:space-between;
+  gap:12px; flex-wrap:wrap;
+}
+.brand { display:flex; align-items:center; gap:12px; }
+.logo {
+  width:52px;height:52px;border-radius:15px;
+  display:grid;place-items:center;background:#ffffff15;
+  border:1px solid #ffffff30;font-size:28px;
+}
+.brand h1 {font-size:19px;margin:0;line-height:1.7;}
+.brand p {font-size:11px;color:#c8d9e7;margin:0;}
+.top-badge {
+  font-size:11px;border:1px solid #ffffff40;
+  padding:5px 10px;border-radius:20px;color:#d7f8fc;
+}
+.hero { padding:27px 0 0; }
+.hero h2 {font-size:clamp(23px,5vw,35px);margin:0 0 8px;}
+.hero p {color:#d1dfeb;margin:0 0 18px;font-size:14px;}
+.search {
+  display:flex;gap:8px;background:white;
+  padding:6px;border-radius:14px;max-width:680px;
+}
+.search input {
+  min-width:0;flex:1;border:0;outline:0;
+  padding:10px;color:var(--text);background:transparent;
+}
+.btn {
+  border:0;border-radius:11px;padding:10px 15px;
+  font-weight:bold;font-size:13px;
+}
+.btn-primary {background:var(--blue);color:white;}
+.btn-dark {background:var(--navy);color:white;}
+.btn-light {background:#e8f1f6;color:var(--navy);}
+.btn-green {background:var(--green);color:white;}
+.btn-red {background:#fff0f0;color:var(--red);}
+.btn:disabled {opacity:.5;cursor:not-allowed;}
+main {padding:24px 0 45px;}
+.stats {
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:10px;margin-bottom:24px;
+}
+.stat {
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;padding:12px;text-align:center;
+}
+.stat strong {display:block;font-size:23px;color:var(--blue);}
+.stat span {font-size:11px;color:var(--muted);}
+.section {margin:25px 0;}
+.section-head {
+  display:flex;align-items:center;justify-content:space-between;
+  gap:10px;flex-wrap:wrap;margin-bottom:14px;
+}
+.section-head h2 {font-size:19px;margin:0;}
+.section-head p {font-size:12px;color:var(--muted);margin:2px 0 0;}
+.categories {
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;
+}
+.category {
+  border:1px solid var(--border);background:white;
+  border-radius:15px;padding:13px 7px;text-align:center;
+  color:var(--text);transition:.15s;
+}
+.category:hover,.category.active {
+  border-color:var(--blue);background:#e9f7fb;
+}
+.category .emoji {display:block;font-size:27px;}
+.category strong {display:block;font-size:12px;margin-top:3px;}
+.category small {color:var(--muted);font-size:10px;}
+.panel {
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:18px;margin-bottom:16px;
+}
+.panel h3 {margin:0 0 5px;font-size:17px;}
+.hint {font-size:12px;color:var(--muted);margin:0 0 15px;}
+.field {margin-bottom:13px;}
+.field label {
+  display:block;font-size:12px;font-weight:bold;margin-bottom:5px;
+}
+.field input,.field select,.field textarea {
+  width:100%;padding:11px;border:1px solid var(--border);
+  background:#fbfdff;border-radius:10px;color:var(--text);
+}
+.field textarea {min-height:85px;resize:vertical;}
+.field input[type="file"] {padding:9px;background:white;}
+.grid2 {display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.checkline {display:flex;gap:8px;align-items:flex-start;font-size:12px;}
+.checkline input {margin-top:7px;}
+.toolbar {
+  display:flex;gap:9px;flex-wrap:wrap;margin-bottom:14px;
+}
+.toolbar input,.toolbar select {
+  flex:1;min-width:130px;padding:10px;
+  border:1px solid var(--border);border-radius:10px;background:white;
+}
+.documents {
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;
+}
+.doc {
+  background:white;border:1px solid var(--border);
+  border-radius:15px;padding:15px;min-width:0;
+}
+.doc-icon {
+  width:43px;height:43px;border-radius:12px;
+  background:#e7f5fa;display:grid;place-items:center;
+  font-size:23px;margin-bottom:10px;
+}
+.doc h3 {font-size:14px;line-height:1.8;margin:0 0 5px;overflow-wrap:anywhere;}
+.doc p {font-size:12px;color:var(--muted);margin:4px 0;overflow-wrap:anywhere;}
+.tag {
+  display:inline-block;background:#eaf1f6;color:#34546b;
+  border-radius:20px;padding:3px 8px;font-size:10px;margin:4px 0;
+}
+.doc-actions {display:flex;gap:7px;flex-wrap:wrap;margin-top:12px;}
+.doc-actions button {padding:8px 10px;font-size:11px;}
+.empty {
+  grid-column:1/-1;text-align:center;padding:30px 12px;
+  border:1px dashed #b9cbd8;border-radius:15px;color:var(--muted);
+  background:#ffffff80;font-size:13px;
+}
+.empty .emoji {font-size:35px;display:block;}
+.notice {
+  background:#fff8e7;border:1px solid #f1d99c;
+  color:#76551b;padding:12px;border-radius:12px;
+  font-size:12px;margin:12px 0;
+}
+.info-box {
+  background:#e9f7fb;border:1px solid #c9eaf1;
+  border-radius:12px;padding:12px;font-size:12px;
+}
+footer {
+  background:var(--navy);color:white;text-align:center;
+  padding:25px 12px;font-size:12px;
+}
+footer p {margin:4px;color:#c5d6e3;}
+.toast {
+  position:fixed;bottom:18px;left:50%;
+  transform:translateX(-50%);z-index:10;
+  background:#102438;color:white;padding:12px 18px;
+  border-radius:12px;box-shadow:0 5px 25px #0002;
+  font-size:12px;width:max-content;max-width:90%;
+  display:none;
+}
+.toast.show {display:block;}
+.hidden {display:none!important;}
+@media(min-width:700px) {
+  .categories {grid-template-columns:repeat(6,1fr);}
+  .documents {grid-template-columns:repeat(3,minmax(0,1fr));}
+  .workspace {display:grid;grid-template-columns: minmax(0,1fr) 320px;gap:18px;align-items:start;}
+  .workspace .section {margin-top:0;}
+}
+@media(max-width:430px) {
+  .brand h1 {font-size:16px;}
+  .top-badge {font-size:10px;}
+  .stats {gap:6px;}
+  .stat {padding:10px 4px;}
+  .stat strong {font-size:19px;}
+  .stat span {font-size:10px;}
+  .documents {grid-template-columns:1fr;}
+  .grid2 {grid-template-columns:1fr;gap:0;}
+  .search .btn {padding:9px 11px;}
+  .panel {padding:14px;}
+}
 </style>
 </head>
-<body><main class="app">
-<header><div class="top"><div class="logo">🚘</div><div><div class="brand">مرجع فنی خودرو</div><div class="sub">دانشنامه تخصصی برق و تعمیرات خودرو</div></div><div class="tag">نسخه آزمایشی</div></div><div class="hero">اطلاعات فنی، <span>همیشه دم دست</span></div><div class="desc">نقشه سیم‌کشی، پایه‌های ECU و BCM، دفترچه‌های تعمیراتی و راهنمای عیب‌یابی را یک‌جا پیدا کن.</div><div class="search"><span>⌕</span><input id="searchInput" placeholder="جست‌وجو: تارا، BCM، قفل مرکزی..." aria-label="جستجوی اسناد"><button id="searchBtn">جست‌وجو</button></div></header>
-<div class="wrap"><div class="stats"><div class="stat"><strong id="docCount">۶</strong><span>سند نمونه</span></div><div class="stat"><strong>۵</strong><span>گروه اطلاعات</span></div><div class="stat"><strong>۱</strong><span>آرشیو آزمایشی</span></div></div>
-<div class="section-head"><h2>دسته‌بندی‌ها</h2><span class="small">برای فیلتر لمس کن</span></div>
-<div class="categories" id="categories">
-  
-</div>
 
-<button class="category" data-cat="نقشه سیم‌کشی"><div class="cat-icon">🗺️</div><div><strong>نقشه سیم‌کشی</strong><small>مدارها و رنگ سیم‌ها</small></div></button>
-<button class="category" data-cat="ECU و BCM"><div class="cat-icon">🔌</div><div><strong>ECU و BCM</strong><small>پایه‌ها و سوکت‌ها</small></div></button>
-<button class="category" data-cat="کد خطا و دیاگ"><div class="cat-icon">🧰</div><div><strong>کد خطا و دیاگ</strong><small>تست و عیب‌یابی</small></div></button>
-<button class="category" data-cat="دفترچه و PDF"><div class="cat-icon">📚</div><div><strong>دفترچه و PDF</strong><small>مستندات تعمیراتی</small></div></button></div>
-<div class="section-head"><h2>آرشیو نقشه‌ها و مستندات</h2><span class="small" id="resultCount">۶ مورد</span></div><div class="filters" id="filters"><button class="chip active" data-filter="همه">همه</button><button class="chip" data-filter="ایران‌خودرو">ایران‌خودرو</button><button class="chip" data-filter="سایپا">سایپا</button><button class="chip" data-filter="نقشه سیم‌کشی">نقشه سیم‌کشی</button><button class="chip" data-filter="ECU و BCM">ECU و BCM</button><button class="chip" data-filter="کد خطا و دیاگ">کد خطا و دیاگ</button><button class="chip" data-filter="دفترچه و PDF">دفترچه و PDF</button></div><div class="docs" id="docs"></div>
-<div class="note">⚠️ این نسخه فقط نمونه نمایشی است. اطلاعات و نقشه‌های کارت‌ها نمونه هستند و نباید برای تعمیر واقعی به‌عنوان نقشه تأییدشده استفاده شوند.</div>
-<details class="admin"><summary>＋ افزودن سند نمونه از همین گوشی</summary><p>این فرم فقط برای آزمایش رابط کاربری است؛ اطلاعات تازه در همین مرورگر نگهداری می‌شود و هنوز به بانک اطلاعات آنلاین متصل نیست.</p><form id="addForm"><input id="newTitle" required placeholder="عنوان سند (مثلاً نقشه قفل مرکزی پارس)"><select id="newCar"><option>ایران‌خودرو</option><option>سایپا</option><option>خودروهای چینی</option><option>خودروهای دیگر</option></select><select id="newCat"><option>نقشه سیم‌کشی</option><option>ECU و BCM</option><option>کد خطا و دیاگ</option><option>دفترچه و PDF</option></select><input id="newDetails" placeholder="مدل، سال یا توضیحات کوتاه"><button class="add" type="submit">افزودن به نمونه آرشیو</button><div class="warning">بارگذاری واقعی PDF، حساب مدیر و ذخیره‌سازی آنلاین در مرحله بعد اضافه می‌شوند.</div></form></details></div><footer>مرجع فنی خودرو · نمونه اولیه برای بررسی روی گوشی اندروید</footer></main>
-<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="modal-card"><div class="modal-head"><h2 id="modalTitle">جزئیات سند</h2><button class="close" id="closeModal">بستن ✕</button></div><div id="modalContent"></div></div></div>
+<body>
+
+<header>
+  <div class="container">
+    <div class="topline">
+      <div class="brand">
+        <div class="logo">🔧</div>
+        <div>
+          <h1>مرجع فنی خودرو</h1>
+          <p>بانک اطلاعات، نقشه و عیب‌یابی خودرو</p>
+        </div>
+      </div>
+      <span class="top-badge">نسخه فنی ۱.۰</span>
+    </div>
+
+    <div class="hero">
+      <h2>دانش فنی، یک قدم نزدیک‌تر</h2>
+      <p>نقشه سیم‌کشی، اطلاعات تعمیراتی و مستندات فنی خودروها را مدیریت کن.</p>
+      <div class="search">
+        <input id="mainSearch" type="search"
+          placeholder="جست‌وجوی خودرو، نقشه، سیستم برق..."
+          aria-label="جست‌وجو">
+        <button class="btn btn-primary" id="searchBtn">جست‌وجو</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="stats">
+    <div class="stat">
+      <strong id="countAll">۰</strong>
+      <span>کل مستندات</span>
+    </div>
+    <div class="stat">
+      <strong id="countPdf">۰</strong>
+      <span>فایل‌های PDF</span>
+    </div>
+    <div class="stat">
+      <strong id="countCars">۰</strong>
+      <span>مدل‌های خودرو</span>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>دسته‌بندی اطلاعات فنی</h2>
+        <p>برای مشاهده مستندات، دسته موردنظر را انتخاب کن.</p>
+      </div>
+      <button class="btn btn-light" id="showAllBtn">نمایش همه</button>
+    </div>
+
+    <div class="categories" id="categories">
+      <button class="category active" data-cat="همه">
+        <span class="emoji">🚘</span>
+        <strong>همه موارد</strong>
+        <small>تمام مستندات</small>
+      </button>
+      <button class="category" data-cat="ایران‌خودرو">
+        <span class="emoji">🚗</span>
+        <strong>ایران‌خودرو</strong>
+        <small>محصولات داخلی</small>
+      </button>
+      <button class="category" data-cat="سایپا">
+        <span class="emoji">🚙</span>
+        <strong>سایپا</strong>
+        <small>محصولات داخلی</small>
+      </button>
+      <button class="category" data-cat="نقشه سیم‌کشی">
+        <span class="emoji">⚡</span>
+        <strong>نقشه سیم‌کشی</strong>
+        <small>مدارهای برق</small>
+      </button>
+      <button class="category" data-cat="تعمیرات ECU">
+        <span class="emoji">🧠</span>
+        <strong>تعمیرات ECU</strong>
+        <small>واحد کنترل موتور</small>
+      </button>
+      <button class="category" data-cat="BCM و مالتی‌پلکس">
+        <span class="emoji">🔌</span>
+        <strong>BCM و مالتی‌پلکس</strong>
+        <small>شبکه و بدنه</small>
+      </button>
+    </div>
+  </section>
+
+  <div class="workspace">
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>کتابخانه مستندات</h2>
+          <p>فایل‌ها و اطلاعاتی که به این دستگاه اضافه کرده‌ای.</p>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <input id="filterSearch" type="search"
+          placeholder="جست‌وجو در مستندات...">
+        <select id="sortSelect" aria-label="مرتب‌سازی">
+          <option value="new">جدیدترین</option>
+          <option value="old">قدیمی‌ترین</option>
+          <option value="title">ترتیب عنوان</option>
+        </select>
+      </div>
+
+      <div id="documents" class="documents"></div>
+    </section>
+
+    <aside class="section" id="addSection">
+      <div class="panel">
+        <h3>➕ افزودن مستند جدید</h3>
+        <p class="hint">اطلاعات را وارد کن و در صورت نیاز فایل PDF را انتخاب کن.</p>
+
+        <form id="docForm">
+          <div class="field">
+            <label for="docTitle">عنوان مستند *</label>
+            <input id="docTitle" required maxlength="120"
+              placeholder="مثلاً نقشه قفل مرکزی پژو پارس">
+          </div>
+
+          <div class="grid2">
+            <div class="field">
+              <label for="carName">نام خودرو *</label>
+              <input id="carName" required maxlength="80"
+                placeholder="مثلاً پژو پارس">
+            </div>
+            <div class="field">
+              <label for="carYear">مدل / سال</label>
+              <input id="carYear" maxlength="40"
+                placeholder="مثلاً ۱۴۰۱">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="docCategory">دسته‌بندی *</label>
+            <select id="docCategory" required>
+              <option value="نقشه سیم‌کشی">نقشه سیم‌کشی</option>
+              <option value="ایران‌خودرو">ایران‌خودرو</option>
+              <option value="سایپا">سایپا</option>
+              <option value="تعمیرات ECU">تعمیرات ECU</option>
+              <option value="BCM و مالتی‌پلکس">BCM و مالتی‌پلکس</option>
+              <option value="دیاگ و عیب‌یابی">دیاگ و عیب‌یابی</option>
+              <option value="مکانیک موتور">مکانیک موتور</option>
+              <option value="سایر">سایر</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="docDescription">توضیحات فنی</label>
+            <textarea id="docDescription" maxlength="3000"
+              placeholder="توضیح سیستم، شماره پایه‌ها، رنگ سیم‌ها و نکات تعمیراتی..."></textarea>
+          </div>
+
+          <div class="field">
+            <label for="docFile">انتخاب فایل PDF (اختیاری)</label>
+            <input id="docFile" type="file"
+              accept=".pdf,application/pdf">
+            <p class="hint" id="fileHint">بهتر است فایل کمتر از ۱۵ مگابایت باشد.</p>
+          </div>
+
+          <label class="checkline">
+            <input id="confirmSave" type="checkbox" required>
+            <span>می‌دانم این نسخه اطلاعات و فایل را فقط در فضای محلی همین مرورگر ذخیره می‌کند.</span>
+          </label>
+
+          <div style="margin-top:15px">
+            <button class="btn btn-primary" id="saveBtn" type="submit" style="width:100%">
+              ذخیره مستند
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h3>💾 پشتیبان اطلاعات</h3>
+        <p class="hint">برای انتقال فهرست مستندات به دستگاه دیگر یا نگهداری نسخه پشتیبان.</p>
+        <button class="btn btn-light" id="exportBtn" style="width:100%">
+          خروجی فهرست اطلاعات (JSON)
+        </button>
+        <div style="height:9px"></div>
+        <label class="btn btn-light" for="importFile"
+          style="display:block;text-align:center">
+          واردکردن فهرست پشتیبان
+        </label>
+        <input id="importFile" type="file" accept=".json,application/json"
+          class="hidden">
+        <p class="hint" style="margin-top:10px">
+          این پشتیبان شامل عنوان‌ها و توضیحات است، نه محتوای PDFها.
+        </p>
+      </div>
+
+      <div class="info-box">
+        <strong>نکته مهم</strong>
+        <p style="margin-bottom:0">
+          پاک‌کردن داده‌های مرورگر، تغییر دستگاه یا حذف برنامه ممکن است اطلاعات محلی را از بین ببرد. فایل‌های مهم را جداگانه نگه دار.
+        </p>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer>
+  <strong>مرجع فنی خودرو | تنظیم موتور رجبی</strong>
+  <p>بانک اطلاعات تعمیرات، نقشه‌های برق و عیب‌یابی خودرو</p>
+  <p>نسخه اولیه قابل توسعه</p>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
 <script>
-const docsSeed=[
-{id:1,title:'نقشه سیم‌کشی قفل مرکزی',car:'ایران‌خودرو',vehicle:'پژو پارس',year:'نمونه',cat:'نقشه سیم‌کشی',details:'نمونه دسته‌بندی مدار قفل مرکزی؛ رنگ سیم و شماره پایه تأیید نشده است.',kind:'نقشه',icon:'🔐'},
-{id:2,title:'راهنمای شناسایی پایه‌های BCM',car:'ایران‌خودرو',vehicle:'نمونه آموزشی',year:'—',cat:'ECU و BCM',details:'ساختار ثبت شماره قطعه، نمای سوکت و عملکرد پایه‌ها.',kind:'راهنما',icon:'🔌'},
-{id:3,title:'نقشه مدار تغذیه ECU',car:'سایپا',vehicle:'نمونه آموزشی',year:'—',cat:'نقشه سیم‌کشی',details:'قالب ثبت رله، فیوز، تغذیه دائم و برق بعد از سوئیچ.',kind:'نقشه',icon:'⚡'},
-{id:4,title:'کدهای خطای موتور و روش بررسی',car:'ایران‌خودرو',vehicle:'عمومی',year:'—',cat:'کد خطا و دیاگ',details:'نمونه ساختار بانک کد خطا؛ شرح و راهکار نهایی باید برای هر ECU بررسی شود.',kind:'دیاگ',icon:'🧰'},
-{id:5,title:'دفترچه تعمیراتی سیستم برق',car:'خودروهای چینی',vehicle:'عمومی',year:'—',cat:'دفترچه و PDF',details:'محل ثبت فایل مرجع، نسخه سند و منبع دریافت.',kind:'PDF',icon:'📘'},
-{id:6,title:'نقشه پایه‌های سوکت جعبه‌فرمان',car:'ایران‌خودرو',vehicle:'تارا',year:'—',cat:'ECU و BCM',details:'قالب ثبت مدل یونیت، شماره قطعه و نقشه پایه‌ها؛ اطلاعات واقعی هنوز وارد نشده است.',kind:'سوکت',icon:'🧩'}];
-let docs=[...docsSeed];let activeFilter='همه';let activeCat='';const fa=n=>new Intl.NumberFormat('fa-IR').format(n);
-function svgArt(id){return `<svg viewBox="0 0 260 120" aria-label="تصویر شماتیک نمونه"><g fill="none" stroke="#24637a" stroke-width="2"><path d="M18 24H80V48H130V24H240"/><path d="M18 85H70V65H145V93H240"/><path d="M80 48V85M130 24V65M190 24V60H220" stroke-dasharray="4 4"/><rect x="84" y="37" width="42" height="22" rx="4" fill="#fff"/><rect x="145" y="82" width="35" height="22" rx="4" fill="#fff"/><circle cx="18" cy="24" r="4" fill="#f2a65a"/><circle cx="240" cy="24" r="4" fill="#f2a65a"/><circle cx="18" cy="85" r="4" fill="#16866b"/><circle cx="240" cy="93" r="4" fill="#16866b"/></g><g font-size="9" fill="#24566b" font-family="Tahoma,Arial"><text x="105" y="51" text-anchor="middle">UNIT</text><text x="162" y="96" text-anchor="middle">PIN</text><text x="34" y="16">12V</text><text x="228" y="16" text-anchor="end">CAN</text><text x="35" y="104">GND</text></g></svg>`}
-function render(){let q=document.getElementById('searchInput').value.trim().toLowerCase();let shown=docs.filter(d=>{let match=(d.title+' '+d.car+' '+d.vehicle+' '+d.cat+' '+d.details+' '+d.year).toLowerCase().includes(q);let filter=activeFilter==='همه'||d.car===activeFilter||d.cat===activeFilter;let cat=!activeCat||d.cat===activeCat;return match&&filter&&cat});document.getElementById('docs').innerHTML=shown.length?shown.map(d=>`<article class="doc"><div class="doc-top"><span class="doc-type">${d.kind}</span>${svgArt(d.id)}</div><div class="doc-body"><h3>${esc(d.title)}</h3><div class="meta">${esc(d.vehicle)} · ${esc(d.car)}<br>${esc(d.details.slice(0,65))}${d.details.length>65?'…':''}</div><div class="doc-foot"><span class="label">${esc(d.cat)}</span><button class="open" data-open="${d.id}">مشاهده سند</button></div></div></article>`).join(''):'<div class="empty">سندی پیدا نشد. عبارت دیگری جست‌وجو کن یا فیلتر را تغییر بده.</div>';document.getElementById('docCount').textContent=fa(docs.length);document.getElementById('resultCount').textContent=fa(shown.length)+' مورد';document.querySelectorAll('.category').forEach(b=>b.classList.toggle('active',b.dataset.cat===activeCat));document.querySelectorAll('.chip').forEach(b=>b.classList.toggle('active',b.dataset.filter===activeFilter));document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>openDoc(Number(b.dataset.open))))}
-function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function openDoc(id){let d=docs.find(x=>x.id===id);if(!d)return;document.getElementById('modalTitle').textContent=d.title;document.getElementById('modalContent').innerHTML=`<div class="diagram">${svgArt(d.id)}</div><p><b>خودرو/گروه:</b> ${esc(d.vehicle)} · ${esc(d.car)}</p><p><b>دسته:</b> ${esc(d.cat)}</p><p><b>توضیحات:</b> ${esc(d.details)}</p><p><b>وضعیت سند:</b> نمونه اولیه — نقشه واقعی یا PDF هنوز به این مورد پیوست نشده است.</p><div class="btn-row"><button onclick="alert('نمایش PDF در مرحله اتصال فایل‌ها اضافه می‌شود.')">بازکردن PDF</button><button class="secondary" onclick="navigator.clipboard&&navigator.clipboard.writeText(${JSON.stringify(d.title)}).then(()=>alert('عنوان کپی شد')).catch(()=>alert('کپی در این محیط پشتیبانی نشد'))">کپی عنوان</button></div>`;document.getElementById('modal').classList.add('show')}
-document.getElementById('searchInput').addEventListener('input',render);document.getElementById('searchBtn').addEventListener('click',render);document.getElementById('filters').addEventListener('click',e=>{let b=e.target.closest('[data-filter]');if(!b)return;activeFilter=b.dataset.filter;activeCat='';render()});document.getElementById('categories').addEventListener('click',e=>{let b=e.target.closest('[data-cat]');if(!b)return;activeCat=activeCat===b.dataset.cat?'':b.dataset.cat;activeFilter='همه';render();document.getElementById('docs').scrollIntoView({behavior:'smooth',block:'start'})});document.getElementById('closeModal').addEventListener('click',()=>document.getElementById('modal').classList.remove('show'));document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')e.currentTarget.classList.remove('show')});document.getElementById('addForm').addEventListener('submit',e=>{e.preventDefault();let title=document.getElementById('newTitle').value.trim();if(!title)return;docs.unshift({id:Date.now(),title,car:document.getElementById('newCar').value,vehicle:'ثبت‌شده توسط کاربر',year:'—',cat:document.getElementById('newCat').value,details:document.getElementById('newDetails').value.trim()||'توضیحی وارد نشده است.',kind:'سند جدید',icon:'📄'});e.target.reset();activeFilter='همه';activeCat='';render();alert('سند به آرشیو نمونه این صفحه اضافه شد. برای ذخیره دائمی باید اتصال بانک اطلاعات در مرحله بعد پیاده‌سازی شود.')});render();
-</script></body></html>
+"use strict";
+
+const DB_NAME = "MarjaFanniKhodroDB";
+const DB_VERSION = 1;
+const STORE_NAME = "documents";
+
+let db = null;
+let docs = [];
+let activeCategory = "همه";
+let searchTerm = "";
+let toastTimer = null;
+
+const $ = id => document.getElementById(id);
+
+function notify(message) {
+  const el = $("toast");
+  el.textContent = message;
+  el.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove("show"), 3000);
+}
+
+function openDatabase() {
+  return new Promise((resolve, reject) => {
+    if (!("indexedDB" in window)) {
+      reject(new Error("مرورگر از ذخیره‌سازی محلی پشتیبانی نمی‌کند."));
+      return;
+    }
+
+    const request = indexedDB.open(DB_NAME, DB_VERSION);
+
+    request.onupgradeneeded = () => {
+      const database = request.result;
+      if (!database.objectStoreNames.contains(STORE_NAME)) {
+        database.createObjectStore(STORE_NAME, { keyPath: "id" });
+      }
+    };
+
+    request.onsuccess = () => {
+      db = request.result;
+      db.onversionchange = () => db.close();
+      resolve(db);
+    };
+
+    request.onerror = () => reject(request.error);
+  });
+}
+
+function getAllDocuments() {
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(STORE_NAME, "readonly");
+    const request = tx.objectStore(STORE_NAME).getAll();
+    request.onsuccess = () => resolve(request.result || []);
+    request.onerror = () => reject(request.error);
+  });
+}
+
+function saveDocument(doc) {
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(STORE_NAME, "readwrite");
+    tx.objectStore(STORE_NAME).put(doc);
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+    tx.onabort = () => reject(tx.error || new Error("ذخیره لغو شد."));
+  });
+}
+
+function deleteDocument(id) {
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(STORE_NAME, "readwrite");
+    tx.objectStore(STORE_NAME).delete(id);
+    tx.oncomplete = () => resolve();
+    tx.onerror = () => reject(tx.error);
+  });
+}
+
+function safeText(value) {
+  return String(value ?? "").replace(/[&<>"']/g, char => ({
+    "&":"&amp;",
+    "<":"&lt;",
+    ">":"&gt;",
+    '"':"&quot;",
+    "'":"&#39;"
+  })[char]);
+}
+
+function normalize(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[يى]/g, "ی")
+    .replace(/ك/g, "ک")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function formatDate(timestamp) {
+  try {
+    return new Date(timestamp).toLocaleDateString("fa-IR");
+  } catch (_) {
+    return "";
+  }
+}
+
+function getVisibleDocuments() {
+  let result = docs.filter(doc => {
+    const matchesCategory =
+      activeCategory === "همه" ||
+      doc.category === activeCategory ||
+      (activeCategory === "ایران‌خودرو" &&
+        normalize(doc.car).includes("ایران خودرو")) ||
+      (activeCategory === "سایپا" &&
+        normalize(doc.car).includes("سایپا"));
+
+    const text = normalize([
+      doc.title, doc.car, doc.year, doc.category, doc.description
+    ].join(" "));
+
+    return matchesCategory && (!searchTerm || text.includes(searchTerm));
+  });
+
+  const sort = $("sortSelect").value;
+  if (sort === "old") result.sort((a,b) => a.createdAt - b.createdAt);
+  else if (sort === "title") {
+    result.sort((a,b) => a.title.localeCompare(b.title, "fa"));
+  } else {
+    result.sort((a,b) => b.createdAt - a.createdAt);
+  }
+
+  return result;
+}
+
+function renderStats() {
+  $("countAll").textContent = docs.length.toLocaleString("fa-IR");
+  $("countPdf").textContent =
+    docs.filter(doc => doc.file && doc.file.type === "application/pdf")
+      .length.toLocaleString("fa-IR");
+
+  const cars = new Set(
+    docs.map(doc => normalize(doc.car)).filter(Boolean)
+  );
+  $("countCars").textContent = cars.size.toLocaleString("fa-IR");
+}
+
+function renderDocuments() {
+  const root = $("documents");
+  const visible = getVisibleDocuments();
+
+  if (!visible.length) {
+    root.innerHTML = `
+      <div class="empty">
+        <span class="emoji">📂</span>
+        <strong>مستندی پیدا نشد</strong>
+        <p>عنوان یا دسته دیگری را جست‌وجو کن یا اولین مستند را اضافه کن.</p>
+      </div>`;
+    return;
+  }
+
+  root.innerHTML = visible.map(doc => `
+    <article class="doc">
+      <div class="doc-icon">${doc.file ? "📄" : "📘"}</div>
+      <h3>${safeText(doc.title)}</h3>
+      <p>🚘 ${safeText(doc.car)}${doc.year ? " · " + safeText(doc.year) : ""}</p>
+      <span class="tag">${safeText(doc.category)}</span>
+      ${doc.description
+        ? `<p>${safeText(doc.description.slice(0,180))}${doc.description.length > 180 ? "…" : ""}</p>`
+        : ""}
+      <p>تاریخ ثبت: ${safeText(formatDate(doc.createdAt))}</p>
+      ${doc.file
+        ? `<p>فایل: ${safeText(doc.fileName || "document.pdf")}</p>`
+        : `<p>بدون فایل پیوست</p>`}
+      <div class="doc-actions">
+        ${doc.file
+          ? `<button class="btn btn-primary" data-action="open" data-id="${safeText(doc.id)}">بازکردن PDF</button>
+             <button class="btn btn-light" data-action="download" data-id="${safeText(doc.id)}">دریافت فایل</button>`
+          : ""}
+        <button class="btn btn-light" data-action="details" data-id="${safeText(doc.id)}">جزئیات</button>
+        <button class="btn btn-red" data-action="delete" data-id="${safeText(doc.id)}">حذف</button>
+      </div>
+    </article>
+  `).join("");
+}
+
+function render() {
+  renderStats();
+  renderDocuments();
+}
+
+function resetForm() {
+  $("docForm").reset();
+  $("fileHint").textContent = "بهتر است فایل کمتر از ۱۵ مگابایت باشد.";
+}
+
+$("docFile").addEventListener("change", () => {
+  const file = $("docFile").files[0];
+  if (!file) {
+    $("fileHint").textContent = "بهتر است فایل کمتر از ۱۵ مگابایت باشد.";
+    return;
+  }
+
+  $("fileHint").textContent =
+    `${file.name} · ${(file.size / 1024 / 1024).toFixed(2)} مگابایت`;
+
+  if (file.type !== "application/pdf" &&
+      !file.name.toLowerCase().endsWith(".pdf")) {
+    notify("لطفاً یک فایل PDF انتخاب کن.");
+  } else if (file.size > 15 * 1024 * 1024) {
+    notify("حجم فایل بیشتر از ۱۵ مگابایت است.");
+  }
+});
+
+$("docForm").addEventListener("submit", async event => {
+  event.preventDefault();
+
+  if (!db) {
+    notify("پایگاه داده آماده نیست. صفحه را دوباره باز کن.");
+    return;
+  }
+
+  const file = $("docFile").files[0];
+
+  if (file && (
+    file.type !== "application/pdf" &&
+    !file.name.toLowerCase().endsWith(".pdf")
+  )) {
+    notify("فقط فایل PDF مجاز است.");
+    return;
+  }
+
+  if (file && file.size > 15 * 1024 * 1024) {
+    notify("حجم فایل باید حداکثر ۱۵ مگابایت باشد.");
+    return;
+  }
+
+  const doc = {
+    id: (crypto.randomUUID
+      ? crypto.randomUUID()
+      : String(Date.now()) + Math.random().toString(16).slice(2)),
+    title: $("docTitle").value.trim(),
+    car: $("carName").value.trim(),
+    year: $("carYear").value.trim(),
+    category: $("docCategory").value,
+    description: $("docDescription").value.trim(),
+    file: file || null,
+    fileName: file ? file.name : "",
+    createdAt: Date.now()
+  };
+
+  if (!doc.title || !doc.car) {
+    notify("عنوان و نام خودرو را وارد کن.");
+    return;
+  }
+
+  $("saveBtn").disabled = true;
+  $("saveBtn").textContent = "در حال ذخیره...";
+
+  try {
+    await saveDocument(doc);
+    docs = await getAllDocuments();
+    resetForm();
+    activeCategory = "همه";
+    searchTerm = "";
+    $("mainSearch").value = "";
+    $("filterSearch").value = "";
+    document.querySelectorAll(".category").forEach(button => {
+      button.classList.toggle("active", button.dataset.cat === "همه");
+    });
+    render();
+    notify("مستند با موفقیت ذخیره شد.");
+  } catch (error) {
+    console.error(error);
+    notify("ذخیره انجام نشد؛ فضای ذخیره‌سازی مرورگر را بررسی کن.");
+  } finally {
+    $("saveBtn").disabled = false;
+    $("saveBtn").textContent = "ذخیره مستند";
+  }
+});
+
+$("categories").addEventListener("click", event => {
+  const button = event.target.closest("[data-cat]");
+  if (!button) return;
+
+  activeCategory = button.dataset.cat;
+  document.querySelectorAll(".category").forEach(item => {
+    item.classList.toggle("active", item === button);
+  });
+  renderDocuments();
+});
+
+function updateSearch() {
+  searchTerm = normalize($("filterSearch").value);
+  $("mainSearch").value = $("filterSearch").value;
+  renderDocuments();
+}
+
+$("filterSearch").addEventListener("input", updateSearch);
+$("mainSearch").addEventListener("input", () => {
+  $("filterSearch").value = $("mainSearch").value;
+  updateSearch();
+});
+$("searchBtn").addEventListener("click", () => {
+  $("filterSearch").value = $("mainSearch").value;
+  updateSearch();
+  $("documents").scrollIntoView({ behavior:"smooth", block:"start" });
+});
+$("mainSearch").addEventListener("keydown", event => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    $("searchBtn").click();
+  }
+});
+
+$("sortSelect").addEventListener("change", renderDocuments);
+
+$("showAllBtn").addEventListener("click", () => {
+  activeCategory = "همه";
+  searchTerm = "";
+  $("mainSearch").value = "";
+  $("filterSearch").value = "";
+  document.querySelectorAll(".category").forEach(button => {
+    button.classList.toggle("active", button.dataset.cat === "همه");
+  });
+  renderDocuments();
+});
+
+$("documents").addEventListener("click", async event => {
+  const button = event.target.closest("[data-action]");
+  if (!button) return;
+
+  const doc = docs.find(item => item.id === button.dataset.id);
+  if (!doc) return;
+
+  const action = button.dataset.action;
+
+  if (action === "details") {
+    alert(
+      "عنوان: " + doc.title +
+      "\nخودرو: " + doc.car +
+      "\nمدل: " + (doc.year || "ثبت نشده") +
+      "\nدسته: " + doc.category +
+      "\nتوضیحات: " + (doc.description || "ندارد")
+    );
+    return;
+  }
+
+  if (action === "delete") {
+    if (!confirm("این مستند و فایل پیوست آن از همین دستگاه حذف شود؟")) return;
+
+    try {
+      await deleteDocument(doc.id);
+      docs = await getAllDocuments();
+      render();
+      notify("مستند حذف شد.");
+    } catch (error) {
+      console.error(error);
+      notify("حذف انجام نشد.");
+    }
+    return;
+  }
+
+  if (action === "open" || action === "download") {
+    if (!doc.file) {
+      notify("این مستند فایل پیوست ندارد.");
+      return;
+    }
+
+    try {
+      const url = URL.createObjectURL(doc.file);
+      if (action === "open") {
+        const tab = window.open(url, "_blank");
+        if (!tab) {
+          URL.revokeObjectURL(url);
+          notify("مرورگر بازکردن پنجره جدید را مسدود کرده است.");
+          return;
+        }
+        setTimeout(() => URL.revokeObjectURL(url), 60000);
+      } else {
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = doc.fileName || "document.pdf";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 60000);
+      }
+    } catch (error) {
+      console.error(error);
+      notify("بازکردن فایل ناموفق بود.");
+    }
+  }
+});
+
+$("exportBtn").addEventListener("click", () => {
+  const data = {
+    app: "Marja Fanni Khodro",
+    version: 1,
+    exportedAt: new Date().toISOString(),
+    documents: docs.map(({ id, title, car, year, category,
+      description, fileName, createdAt }) => ({
+      id, title, car, year, category, description, fileName, createdAt
+    }))
+  };
+
+  const blob = new Blob(
+    [JSON.stringify(data, null, 2)],
+    { type:"application/json;charset=utf-8" }
+  );
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "marja-fanni-backup.json";
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  notify("فهرست اطلاعات آماده دریافت است.");
+});
+
+$("importFile").addEventListener("change", async event => {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  try {
+    const parsed = JSON.parse(await file.text());
+    if (!parsed || !Array.isArray(parsed.documents) ||
+        parsed.documents.length > 5000) {
+      throw new Error("ساختار فایل پشتیبان معتبر نیست.");
+    }
+
+    const valid = parsed.documents.every(doc =>
+      doc && typeof doc.title === "string" &&
+      typeof doc.car === "string" &&
+      typeof doc.category === "string"
+    );
+
+    if (!valid) throw new Error("اطلاعات فایل معتبر نیست.");
+
+    if (!confirm(
+      "فهرست پشتیبان وارد شود؟ مستندات موجود حذف نمی‌شوند."
+    )) return;
+
+    for (const item of parsed.documents) {
+      const imported = {
+        id: "import-" + (crypto.randomUUID
+          ? crypto.randomUUID()
+          : Date.now() + "-" + Math.random()),
+        title: item.title.slice(0,120),
+        car: item.car.slice(0,80),
+        year: String(item.year || "").slice(0,40),
+        category: item.category.slice(0,80),
+        description: String(item.description || "").slice(0,3000),
+        file: null,
+        fileName: String(item.fileName || "").slice(0,200),
+        createdAt: Number(item.createdAt) || Date.now()
+      };
+      await saveDocument(imported);
+    }
+
+    docs = await getAllDocuments();
+    render();
+    notify("فهرست پشتیبان وارد شد؛ فایل‌های PDF باید جداگانه اضافه شوند.");
+  } catch (error) {
+    console.error(error);
+    notify("فایل پشتیبان معتبر نیست یا قابل خواندن نیست.");
+  } finally {
+    event.target.value = "";
+  }
+});
+
+async function startApp() {
+  try {
+    await openDatabase();
+    docs = await getAllDocuments();
+    render();
+  } catch (error) {
+    console.error(error);
+    $("documents").innerHTML = `
+      <div class="empty">
+        <span class="emoji">⚠️</span>
+        <strong>ذخیره‌سازی در دسترس نیست</strong>
+        <p>سایت را در مرورگر Chrome باز کن و دوباره امتحان کن.</p>
+      </div>`;
+    notify("پایگاه داده باز نشد؛ مرورگر یا محیط اجرا را بررسی کن.");
+  }
+}
+
+startApp();
+</script>
+</body>
+</html>
